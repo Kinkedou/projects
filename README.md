@@ -14,7 +14,7 @@
 - MQTT 接入 OneNET 云平台，实现手机 APP 远程控制
 - 多客户端并发接入（Qt + MQTT）
 
-**技术栈**：`嵌入式Linux` `i.MX6ULL` `C` `C++` `Qt` `RPC` `MQTT` `OneNET` `V4L2` `多线程` `Socket` `JSON`
+**技术栈**：`嵌入式Linux`, `i.MX6ULL`, `C/C++`, `Qt`, `RPC`, `MQTT`, `V4L2`, `多线程`, `Socket`, `JSON`
 
 ---
 
