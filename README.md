@@ -100,14 +100,14 @@
    
 生成可执行文件 rpc_server
 
-2. **编译 MQTT 服务端**
+2. **编译 MQTT 客户端**
    ```bash
    cd mqtt_device_wechat
    make
 
 生成可执行文件 mqtt_client
 
-3. **编译 QT 服务端**
+3. **编译 QT 客户端**
 
 使用 Qt Creator 打开 LED_TempHumi_Video/LED_TempHumi_Video.pro，选择合适 kit（交叉编译工具链）进行编译。编译输出目录示例为 build-LED_TempHumi_Video-100ask-Debug/，生成的可执行文件为 LED_TempHumi_Video
 
