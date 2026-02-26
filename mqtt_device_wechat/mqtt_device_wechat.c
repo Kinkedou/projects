@@ -176,7 +176,7 @@ int main(int argc, char* argv[])
                         \"value\": %d\
                     }\
                 }\
-            }", temp, humi);
+            }", humi, temp);
 			//设置要发布的消息内容，长度，QoS级别和是否保留等参数
             pubmsg_dht.payload = buf_dht;
             pubmsg_dht.payloadlen = (int)strlen(buf_dht);
