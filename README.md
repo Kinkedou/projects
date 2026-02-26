@@ -82,3 +82,49 @@
 ### 4. 整体数据流
  - 用户（触摸屏）   <---------------> QT 客户端 <-----------------> RPC Server <---> 硬件（LED、DHT11、摄像头）
  - 用户（手机 APP） <--> OneNET 云平台 <--> MQTT 客户端 <---> RPC Server <---> 硬件（LED、DHT11、摄像头）
+
+---
+
+## 🔧 编译与运行
+
+### 依赖库
+项目依赖以下第三方库（已放置在 `lib/` 目录，或需自行编译）：
+- **jsonrpc-c**：用于构建 RPC 消息
+- **libev**：事件循环库
+- **paho.mqtt.c**：MQTT 客户端 C 库
+
+交叉编译时需确保工具链已安装。
+
+### 编译步骤
+1. **编译 RPC 服务端**
+   cd rpc_server
+   make
+   
+   生成可执行文件 rpc_server
+
+2. **编译 MQTT 服务端**
+   cd mqtt_device_wechat
+   make
+
+   生成可执行文件 mqtt_client
+
+3. **编译 QT 服务端**
+   使用 Qt Creator 打开 LED_HumiTemp_Video/LED_HumiTemp_Video.pro，选择合适 kit（交叉编译工具链）进行编译。编译输出目录示例为 build-LED_TempHumi_Video-100ask-Debug/，生成的可执行文件为 LED_HumiTemp_Video
+
+### 运行步骤
+-启动服务端./rpc_server
+-启动两个客户端（不分先后）  ./LED_HumiTemp_Video  ./mqtt_device_wechat
+-建议编写开机自启动脚本（如 /etc/init.d/S99myqt），内容示例：
+
+---
+
+## 📌 后续计划
+增加更多传感器和外设（如烟雾、人体红外、GPS）
+部署更智能的检测算法，增加目标识别等功能
+优化视频帧采集的性能和传输效率
+编写简单的驱动程序，对现有驱动进行替换
+
+---
+
+## 🤝 贡献与反馈
+本项目为基于韦东山老师开源项目的个人改进学习作品，欢迎交流学习！
