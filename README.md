@@ -21,7 +21,7 @@
 ## 📦 仓库结构
 | 目录/文件 | 说明 |
 |----------|------|
-| LED_HumiTemp_Video/ | QT 触摸屏客户端源码（RPC Client） |
+| LED_TempHumi_Video/ | QT 触摸屏客户端源码（RPC Client） |
 | build-LED_TempHumi_Video-100ask-Debug/ | QT 客户端编译输出目录 |
 | drv/ | 开发板驱动（LED, DHT11 驱动, 开发板提供） |
 | lib/ | 第三方库（jsonrpc-c, libev, paho.mqtt.c） |
@@ -35,7 +35,7 @@
 ## 🧩 模块详解
 
 ### 1. QT 触摸屏客户端（本地 UI 操作界面）
-- **位置**：`LED_HumiTemp_Video/`
+- **位置**：`LED_TempHumi_Video/`
 - **界面&功能**：
   - 主页面：实时显示温湿度、LED 开关、移动监测开关、查看监控、查看告警记录
   - 监控副页面：实时视频画面，返回、记录（保存当前帧）、移动监测开关、上下翻页浏览所有告警记录
@@ -109,12 +109,12 @@
 
 3. **编译 QT 服务端**
 
-使用 Qt Creator 打开 LED_HumiTemp_Video/LED_HumiTemp_Video.pro，选择合适 kit（交叉编译工具链）进行编译。编译输出目录示例为 build-LED_TempHumi_Video-100ask-Debug/，生成的可执行文件为 LED_HumiTemp_Video
+使用 Qt Creator 打开 LED_TempHumi_Video/LED_TempHumi_Video.pro，选择合适 kit（交叉编译工具链）进行编译。编译输出目录示例为 build-LED_TempHumi_Video-100ask-Debug/，生成的可执行文件为 LED_TempHumi_Video
 
 ### 运行步骤
 - 确保开发板可以ping通外网
 - 启动服务端`./rpc_server`
-- 启动两个客户端（不分先后）`./LED_HumiTemp_Video` `./mqtt_device_wechat`
+- 启动两个客户端（不分先后）`./LED_TempHumi_Video` `./mqtt_device_wechat`
 - 建议编写开机自启动脚本（如 /etc/init.d/S99myqt），内容示例：
   ```bash
   #!/bin/sh
