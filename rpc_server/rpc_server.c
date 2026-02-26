@@ -116,7 +116,6 @@ void* detect_thread_func(void* arg) {
         usleep(33000); // 近似30帧/秒
     }
 
-    printf("移动检测线程已停止\n");
     pthread_exit(NULL);
     return NULL;
 }
