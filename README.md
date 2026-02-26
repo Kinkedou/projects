@@ -34,7 +34,7 @@
 
 ## ❗ 快速开始
 ### 编译
-    ```bash
+```bash
    #编译 RPC 服务端
    cd rpc_server
    make
@@ -42,13 +42,18 @@
    cd mqtt_device_wechat
    make
    #Qt 客户端：使用 Qt Creator 交叉编译
-
+```
 ### 运行
     ```bash
     ./rpc_server               # 先启动服务端
     ./LED_HumiTemp_Video       # 本地 Qt 客户端
     ./mqtt_device_wechat       # MQTT 远程云平台客户端
   
+---
+
+## 📋 详细说明
+以下为项目完整模块设计、编译运行等详情内容，供进一步了解。
+
 ---
 
 ## 🧩 模块详解
