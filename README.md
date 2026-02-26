@@ -101,20 +101,21 @@
    cd rpc_server
    make
    
-   生成可执行文件 rpc_server
+生成可执行文件 rpc_server
 
 3. **编译 MQTT 服务端**
+   ```bash
    cd mqtt_device_wechat
    make
 
-   生成可执行文件 mqtt_client
+生成可执行文件 mqtt_client
 
-4. **编译 QT 服务端**
+5. **编译 QT 服务端**
    使用 Qt Creator 打开 LED_HumiTemp_Video/LED_HumiTemp_Video.pro，选择合适 kit（交叉编译工具链）进行编译。编译输出目录示例为 build-LED_TempHumi_Video-100ask-Debug/，生成的可执行文件为 LED_HumiTemp_Video
 
 ### 运行步骤
--启动服务端./rpc_server
--启动两个客户端（不分先后）  ./LED_HumiTemp_Video  ./mqtt_device_wechat
+-启动服务端`./rpc_server`
+-启动两个客户端（不分先后）`./LED_HumiTemp_Video` `./mqtt_device_wechat`
 -建议编写开机自启动脚本（如 /etc/init.d/S99myqt），内容示例：
 
 ---
